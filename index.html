@@ -60,6 +60,14 @@
             const rndInt = Math.floor(Math.random() * 16) + 1;
             return blendModes[rndInt];
         }
+	    
+	$('div').not('.name', '.link').click(function(){ 
+            $(this).attr("style",
+                "border-radius: " + pickABorder() + pickABorder() + pickABorder() + pickABorder() + ";"
+                + "background: " + pickAColor() + ";"
+                + "background-position: " + backgroundPOS() + ";"
+                + "background-blend-mode: " + pickABlendMode() + ";");	
+	});	    
     });   
     </script>
 
